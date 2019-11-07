@@ -12,7 +12,7 @@ public class Table : MonoBehaviour
         discard.Add(card);
     }
     public Offensive_Card last_card;
-    public int player_count;
+    static public int player_count;
     public Player pov_player;
     public Player player1;
     public Player player2;
