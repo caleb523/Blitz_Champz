@@ -11,10 +11,4 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/10-9-2019.unity
     guid: 7363a700df4d1fb4d9785b489fae1cb9
-  - enabled: 1
-    path: Assets/Menu.unity
-    guid: b96567f5ba11585448ecb0304fea9793
-  - enabled: 1
-    path: Assets/BlitzChampzGame.unity
-    guid: 8429831adbb507d4ea8f84e0e399e5ef
   m_configObjects: {}

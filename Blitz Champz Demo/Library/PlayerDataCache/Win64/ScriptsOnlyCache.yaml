@@ -5,7 +5,10 @@ ScriptsOnlyBuild:
     - Blocked_Kick
     - Conversion
     - Deck
-    - End_Of_Quarter
+    - End_Of_Quarter1
+    - End_Of_Quarter2
+    - End_Of_Quarter3
+    - End_Of_Quarter4
     - Extra_Point
     - Field_Goal
     - First_Down
@@ -24,16 +27,15 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Settings
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
+    - TMPro.TextMeshPro
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
     - UnityEditor.TestTools.TestRunner.TestListCacheData
     UnityEngine.UI.dll:
     - UnityEngine.EventSystems.EventSystem
     - UnityEngine.EventSystems.StandaloneInputModule
-    - UnityEngine.UI.Button
     - UnityEngine.UI.CanvasScaler
     - UnityEngine.UI.GraphicRaycaster
-    - UnityEngine.UI.Image
     - UnityEngine.UI.Text
   sceneClasses:
     Assets/10-9-2019.unity:
@@ -45,7 +47,11 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 21
       Script: {instanceID: 0}
+    - Class: 23
+      Script: {instanceID: 0}
     - Class: 28
+      Script: {instanceID: 0}
+    - Class: 33
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
@@ -68,8 +74,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 9842}
     - Class: 114
-      Script: {instanceID: 9882}
-    - Class: 114
       Script: {instanceID: 9950}
     - Class: 114
       Script: {instanceID: 9980}
@@ -82,43 +86,49 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 10020}
     - Class: 114
-      Script: {instanceID: 10060}
+      Script: {instanceID: 10042}
     - Class: 114
-      Script: {instanceID: 10116}
+      Script: {instanceID: 10062}
     - Class: 114
-      Script: {instanceID: 10256}
+      Script: {instanceID: 10118}
     - Class: 114
-      Script: {instanceID: 10268}
+      Script: {instanceID: 10144}
     - Class: 114
-      Script: {instanceID: 10288}
+      Script: {instanceID: 10260}
     - Class: 114
-      Script: {instanceID: 10438}
+      Script: {instanceID: 10272}
     - Class: 114
-      Script: {instanceID: 10598}
+      Script: {instanceID: 10292}
     - Class: 114
-      Script: {instanceID: 10612}
+      Script: {instanceID: 10442}
     - Class: 114
-      Script: {instanceID: 10634}
+      Script: {instanceID: 10602}
     - Class: 114
-      Script: {instanceID: 10822}
+      Script: {instanceID: 10638}
     - Class: 114
-      Script: {instanceID: 10836}
+      Script: {instanceID: 10826}
     - Class: 114
-      Script: {instanceID: 10906}
+      Script: {instanceID: 10840}
     - Class: 114
-      Script: {instanceID: 11054}
+      Script: {instanceID: 10910}
     - Class: 114
-      Script: {instanceID: 11178}
+      Script: {instanceID: 10918}
     - Class: 114
-      Script: {instanceID: 11204}
+      Script: {instanceID: 11060}
     - Class: 114
-      Script: {instanceID: 11320}
+      Script: {instanceID: 11082}
     - Class: 114
-      Script: {instanceID: 11346}
+      Script: {instanceID: 11186}
     - Class: 114
-      Script: {instanceID: 11362}
+      Script: {instanceID: 11212}
     - Class: 114
-      Script: {instanceID: 11404}
+      Script: {instanceID: 11310}
+    - Class: 114
+      Script: {instanceID: 11352}
+    - Class: 114
+      Script: {instanceID: 11368}
+    - Class: 114
+      Script: {instanceID: 11410}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -146,7 +156,7 @@ ScriptsOnlyBuild:
     className: CanvasScaler
   - hash:
       serializedVersion: 2
-      Hash: 66186e6188875320029f4acd00f999b6
+      Hash: d5b88116b3e46f96cd178eb0f2305cca
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Player
@@ -242,7 +252,7 @@ ScriptsOnlyBuild:
     className: Interception
   - hash:
       serializedVersion: 2
-      Hash: 8a4405d034e7e4137b02d67ddea03e20
+      Hash: 60c02f28279ddb8a0266f269d90d0bf0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Rushing_TD
@@ -290,13 +300,19 @@ ScriptsOnlyBuild:
     className: Tackle
   - hash:
       serializedVersion: 2
-      Hash: 8a4405d034e7e4137b02d67ddea03e20
+      Hash: 60c02f28279ddb8a0266f269d90d0bf0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Field_Goal
   - hash:
       serializedVersion: 2
-      Hash: 3d3b3b901f357cdc0f318f25864ee6a1
+      Hash: 751aea79441c33139a376afbcbc36995
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: End_Of_Quarter3
+  - hash:
+      serializedVersion: 2
+      Hash: de434e5e454ec04adbd5650fcc56d273
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Table
@@ -326,10 +342,16 @@ ScriptsOnlyBuild:
     className: TMP_SubMeshUI
   - hash:
       serializedVersion: 2
-      Hash: 8a4405d034e7e4137b02d67ddea03e20
+      Hash: 60c02f28279ddb8a0266f269d90d0bf0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Conversion
+  - hash:
+      serializedVersion: 2
+      Hash: 751aea79441c33139a376afbcbc36995
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: End_Of_Quarter4
   - hash:
       serializedVersion: 2
       Hash: 5ab533713adae59372fb3e10a585c186
@@ -422,7 +444,7 @@ ScriptsOnlyBuild:
     className: SignalTrack
   - hash:
       serializedVersion: 2
-      Hash: 8a4405d034e7e4137b02d67ddea03e20
+      Hash: 60c02f28279ddb8a0266f269d90d0bf0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Offensive_Card
@@ -446,7 +468,7 @@ ScriptsOnlyBuild:
     className: TextContainer
   - hash:
       serializedVersion: 2
-      Hash: 8a4405d034e7e4137b02d67ddea03e20
+      Hash: 60c02f28279ddb8a0266f269d90d0bf0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Hail_Mary
@@ -464,7 +486,7 @@ ScriptsOnlyBuild:
     className: RawImage
   - hash:
       serializedVersion: 2
-      Hash: 932280079648488b13c05da9b617a407
+      Hash: 764f906fec11f19433e3f80e97fa7137
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Deck
@@ -530,6 +552,12 @@ ScriptsOnlyBuild:
     className: Blocked_Kick
   - hash:
       serializedVersion: 2
+      Hash: 751aea79441c33139a376afbcbc36995
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: End_Of_Quarter1
+  - hash:
+      serializedVersion: 2
       Hash: 3b760e6526e13f7504f59e210145899a
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -557,10 +585,16 @@ ScriptsOnlyBuild:
       Hash: 751aea79441c33139a376afbcbc36995
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
+    className: End_Of_Quarter2
+  - hash:
+      serializedVersion: 2
+      Hash: 751aea79441c33139a376afbcbc36995
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
     className: Continuation_Card
   - hash:
       serializedVersion: 2
-      Hash: 8a4405d034e7e4137b02d67ddea03e20
+      Hash: 60c02f28279ddb8a0266f269d90d0bf0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Extra_Point
@@ -590,12 +624,6 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: 0e14094b3f9cf415895be9406e38ebe5
-    assemblyName: Assembly-CSharp.dll
-    namespaceName: 
-    className: End_Of_Quarter
-  - hash:
-      serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -620,7 +648,7 @@ ScriptsOnlyBuild:
     className: Outline
   - hash:
       serializedVersion: 2
-      Hash: 8a4405d034e7e4137b02d67ddea03e20
+      Hash: 60c02f28279ddb8a0266f269d90d0bf0
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: Passing_TD
