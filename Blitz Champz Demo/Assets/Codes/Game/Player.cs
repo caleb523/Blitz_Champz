@@ -40,6 +40,7 @@ public class Player : MonoBehaviour {
 			hand.Add(new_card);
 		}
 		OrderCards();
+		CheckValid();
 	}
 
 	public void Remove(GameObject card) {
@@ -131,7 +132,7 @@ public class Player : MonoBehaviour {
 		return canStop;
 	}
 	public bool GetValid() {
-		return valid;
+		return CheckValid();
 	}
 	void Update () {
 	}

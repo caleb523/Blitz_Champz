@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Networking;
+using UnityEngine.Networking.Match;
 
 public class Table : MonoBehaviour
 {
@@ -28,10 +30,23 @@ public class Table : MonoBehaviour
     void Start() {
         player_count = Manager.PlayerCount;
         Create_Deck();
-        Create_Players();
-        current = order.First;
-        current_player = player1;
-        StartCoroutine(Wait_For_Deck());
+        //Create_Players();
+        StartCoroutine(Wait_For_Players());
+    }
+    public void AddPlayer(Player a) {
+        if (!player1) {
+            player1 = a;
+            order.AddLast(player1);
+        } else if (!player2) {
+            player2 = a;
+            order.AddLast(player1);
+        } else if (!player3) {
+            player3 = a;
+            order.AddLast(player1);
+        } else if (!player4) {
+            player4 = a;
+            order.AddLast(player1);
+        }
     }
     public void Discard(GameObject card) {
         card.GetComponent<SpriteRenderer>().sortingOrder = discard.Count;
@@ -68,6 +83,12 @@ public class Table : MonoBehaviour
         yield return new WaitUntil(() => draw_deck.draw_deck.Count == 100);
         Debug.Log("Deck == 100 " + draw_deck.draw_deck.Count);
         initial_deal();
+    }
+    IEnumerator Wait_For_Players() {
+        yield return new WaitUntil(() => order.Count == Manager.PlayerCount);
+        current = order.First;
+        current_player = player1;
+        StartCoroutine(Wait_For_Deck());
     }
     private void Create_Deck() {
         Debug.Log("Deck start");
@@ -143,4 +164,10 @@ public class Table : MonoBehaviour
     }
     void Update() {
     }
+    public virtual void OnServerAddPlayer(NetworkConnection conn, short playerControllerId)
+    {
+        var player = (GameObject)GameObject.Instantiate(Resources.Load("Prefabs/player"), new Vector3(-8f, -4.4f, 1f), Quaternion.identity);
+        NetworkServer.AddPlayerForConnection(conn, player, playerControllerId);
+    }
 }
+

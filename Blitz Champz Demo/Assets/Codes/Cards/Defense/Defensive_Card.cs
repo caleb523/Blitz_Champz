@@ -42,6 +42,7 @@ public class Defensive_Card : Card {
 		}
 	}
 	public override bool CheckValid() {
+		win_played = false;
 		if(owner.table.last_card){
 			if (owner.table.last_card.GetPass() == true && pass == true) {
 				valid = true;
@@ -53,7 +54,7 @@ public class Defensive_Card : Card {
 				valid = true;
 				return true;
 			} else {
-				valid = true;
+				valid = false;
 				return false;
 			}
 		} else {
