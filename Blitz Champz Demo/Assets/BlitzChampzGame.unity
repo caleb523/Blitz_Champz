@@ -2104,7 +2104,7 @@ PrefabInstance:
     - target: {fileID: 3965232674487610128, guid: 643f292a7135c3848a61c4207fbe35ad,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3965232674487610131, guid: 643f292a7135c3848a61c4207fbe35ad,
         type: 3}
@@ -2236,5 +2236,10 @@ PrefabInstance:
       propertyPath: gameOver
       value: 
       objectReference: {fileID: 1275165563}
+    - target: {fileID: 6435947272145810683, guid: 643f292a7135c3848a61c4207fbe35ad,
+        type: 3}
+      propertyPath: m_ServerOnly
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 643f292a7135c3848a61c4207fbe35ad, type: 3}

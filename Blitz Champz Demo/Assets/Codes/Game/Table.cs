@@ -6,8 +6,9 @@ using TMPro;
 using UnityEngine.Networking;
 using UnityEngine.Networking.Match;
 
-public class Table : MonoBehaviour
+public class Table : NetworkBehaviour
 {
+    [SyncVar]
     public Deck draw_deck;
     public List<GameObject> discard;
     public Offensive_Card last_card;
