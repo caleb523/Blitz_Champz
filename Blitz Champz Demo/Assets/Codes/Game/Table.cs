@@ -64,6 +64,7 @@ public class Table : MonoBehaviourPunCallbacks
                             player3 = player3_object.GetComponent<Player>();
                             order.AddLast(player3);
                             player3.table = this;
+                            p3.gameObject.SetActive(true);
                             player3_object.GetComponent<PhotonView>().TransferOwnership(temp_current.Value);
                             temp_current = temp_current.Next ?? temp_current.List.First;
                         } else if(b == 2) {
@@ -71,6 +72,7 @@ public class Table : MonoBehaviourPunCallbacks
                             player4 = player4_object.GetComponent<Player>();
                             order.AddLast(player4);
                             player4.table = this;
+                            p4.gameObject.SetActive(true);
                             player4_object.GetComponent<PhotonView>().TransferOwnership(temp_current.Value);
                             temp_current = temp_current.Next ?? temp_current.List.First;
                         }
@@ -117,6 +119,7 @@ public class Table : MonoBehaviourPunCallbacks
         current = order.First;
         current_player = player1;
         player_count = 3;
+        p3.gameObject.SetActive(true);
     }
     [PunRPC]
     void UpdateTable(int a, int b, int c, int d) {
@@ -129,6 +132,8 @@ public class Table : MonoBehaviourPunCallbacks
         current = order.Last;
         current_player = current.Value;
         player_count = 4;
+        p3.gameObject.SetActive(true);
+        p4.gameObject.SetActive(true);
     }
     [PunRPC]
     void SyncTable(int a, bool b) {
