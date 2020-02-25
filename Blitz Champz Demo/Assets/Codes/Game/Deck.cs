@@ -113,14 +113,16 @@ public class Deck : MonoBehaviour
         }
     }
     
-    public GameObject Draw() {
+    public GameObject Draw() { //called by the Player class. Generates a number and returns that card in the deck to the player
         int random_num = Random.Range(0, draw_deck.Count);
         GameObject drawn_card = draw_deck[random_num];
         draw_deck.RemoveAt(random_num);
         drawn_card.GetComponent<Card>().Hide();
         return drawn_card;
     }
-    private void OnMouseUpAsButton() {
+    private void OnMouseUpAsButton() { //this is blank so that Unity treats it as a clickable object but nothing happens
+    //this prevents users from playing cards that are below the deck
+    //in hindsight, I would just have the cards be disabled when they are created and only enabled when they are drawn
 	}
     void Update()
     {
